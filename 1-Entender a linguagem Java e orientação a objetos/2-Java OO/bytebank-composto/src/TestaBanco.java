@@ -1,11 +1,14 @@
 public class TestaBanco {
     
     public static void main(String[] args) {
-        Cliente primeiraConta = new Cliente();
-        primeiraConta.nome = "Pedro Souza";
+        Cliente pedro = new Cliente();
+        pedro.nome = "Pedro Souza";
 
         Conta contaDoPedro = new Conta();
-        contaDoPedro.titular = primeiraConta.nome;
+        contaDoPedro.titular = pedro;
+
+        System.out.println(contaDoPedro.titular.nome);
+        
 
     }
 }
