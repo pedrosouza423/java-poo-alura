@@ -3,12 +3,14 @@ public class Conta {
     private int agencia;
     private int numero;
     private Cliente titular;
+    private static int numContas;
 
     public Conta(int agencia, int numero, Cliente titular){
         this.agencia = agencia;
         this.numero = numero;
         this.titular = titular;
 
+        numContas++;
     }
 
     //Métodos
@@ -40,6 +42,10 @@ public class Conta {
     }
 
     //Getters
+    public static int getNumContas() {
+        return numContas;
+    }
+
     public double getSaldo() {
         return saldo;
     }
