@@ -4,6 +4,13 @@ public class Conta {
     private int numero;
     private Cliente titular;
 
+    public Conta(int agencia, int numero, Cliente titular){
+        this.agencia = agencia;
+        this.numero = numero;
+        this.titular = titular;
+
+    }
+
     //Métodos
     public void sacar(double valor) {
         if(valor > this.saldo){
@@ -51,10 +58,18 @@ public class Conta {
 
     //Setters
     public void setNumero(int numero) {
+        if(numero <= 0){
+            System.out.println("Você não pode colocar um número negativo ou igual a zero");
+            return;
+        }
         this.numero = numero;
     }
 
     public void setAgencia(int agencia) {
+        if(agencia <= 0){
+            System.out.println("Você não pode colocar um número de agencia negativo ou igual a zero");
+            return;
+        }
         this.agencia = agencia;
     }
 
