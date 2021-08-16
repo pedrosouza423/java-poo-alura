@@ -5,10 +5,9 @@ public class Conta {
     private Cliente titular;
     private static int numContas;
 
-    public Conta(int agencia, int numero, Cliente titular){
+    public Conta(int agencia, int numero){
         this.agencia = agencia;
         this.numero = numero;
-        this.titular = titular;
 
         numContas++;
     }
